@@ -34,11 +34,12 @@ function draw(){
         if(myData[i] != ' '){
             if('textImage'+myData[i] in fontText){
                 image(fontText['textImage'+myData[i]], pos, 20)
+                pos += fontText['textImage'+myData[i]].width
             }
         }else{
             image(fontText['space'], pos, 20)
+            pos+=fontText['space'].width
         }
-        pos += 20
 
     }
 }
