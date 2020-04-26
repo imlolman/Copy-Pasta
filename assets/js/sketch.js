@@ -21,24 +21,29 @@ function setup(){
 }
 
 function draw(){
-    image(img, 0, 0, width, height)
+    background(255)
+    // image(img, 0, 0, width, height)
     textSize(fontsize)
     fill('#264180')
     if(linespacing){
         textLeading(linespacing);
     }
-    pos = xaxis
+    pos = createVector(xaxis, yaxis)
     data = "\n"+myData
     // text(data, xaxis, yaxis, w, 900);
     for(var i=0;i<=myData.length;i++){
+        if(pos.x >= xaxis+w){
+            pos.x = xaxis
+            pos.y += 60
+        }
         if(myData[i] != ' '){
             if('textImage'+myData[i] in fontText){
-                image(fontText['textImage'+myData[i]], pos, 20)
-                pos += fontText['textImage'+myData[i]].width
+                image(fontText['textImage'+myData[i]], pos.x, pos.y)
+                pos.x += fontText['textImage'+myData[i]].width
             }
         }else{
-            image(fontText['space'], pos, 20)
-            pos+=fontText['space'].width
+            image(fontText['space'], pos.x, pos.y)
+            pos.x+=fontText['space'].width
         }
 
     }
