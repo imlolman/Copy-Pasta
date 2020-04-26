@@ -16,7 +16,7 @@
         <!-- <link rel="stylesheet" href="/assets/css/dark.css"> -->
 	</head>
 	<body>
-		<main class="wrapper">
+		<main class="">
 			<nav class="navigation">
 				<section class="container">
 					<a class="navigation-title" href="/">
@@ -41,43 +41,50 @@
 					</a>
 				</section>
 			</nav>
-			<section class="container" id="examples">
-				<h3 class="title">Write Text</h3>
-				<form onsubmit="return false">
-					<fieldset>
-						<textarea placeholder="Enter Text You want to be written a paper...." id="dataField" onkeyup="myData = this.value"></textarea>
-					</fieldset>
-					<input class="button-primary button-large download-image hidden" type="file" id="pageUploader" onclick="">
-					<div class="row">
-						<button class="column button-primary button-large inline-btn" id="btnFileUpload">Upload My Scanned Page</button>
-						<button class="column button-primary button-large inline-btn" onclick="loadPage()">Change to Default Page</button>
-						<button class="column button-primary button-large download-image inline-btn" onclick="save(str(pageNum++))">Download Page</button>
-					</div>
-					<div class="row">
-						<div class="column">
-							<label>Adjust X axis</label>
-							<input type="range" min="1" max="200" value="20" oninput="xaxis=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>Adjust Y axis</label>
-							<input type="range" min="1" max="200" value="20" oninput="yaxis=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>Font Size</label>
-							<input type="range" min="0.05" max="5" value="1" step="0.1" oninput="fontsize=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>width</label>
-							<input type="range" min="100" max="800" value="700" oninput="w=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>Line Spacing</label>
-							<input type="range" min="50" max="100" value="60" oninput="linespacing=float(this.value)" class="slider">
-						</div>
-					</div>
-				</form>
-				<div id="contributing"></div>
-			</section>
+			<br><br><br>
+			<div class="row" style="max-width:99vw">
+				<div class="column">
+					<section class="container" id="examples">
+						<h3 class="title">Write Text</h3>
+						<form onsubmit="return false">
+							<fieldset>
+								<textarea placeholder="Enter Text You want to be written a paper...." id="dataField" onkeyup="myData = this.value"></textarea>
+							</fieldset>
+							<input class="button-primary button-large download-image hidden" type="file" id="pageUploader" onclick="">
+							<div class="row">
+								<button class="column button-primary button-large inline-btn" id="btnFileUpload">Upload My Scanned Page</button>
+								<button class="column button-primary button-large inline-btn" onclick="loadPage()">Change to Default Page</button>
+								<button class="column button-primary button-large download-image inline-btn" onclick="save(str(pageNum++))">Download Page</button>
+							</div>
+							<div class="row">
+								<div class="column">
+									<label>Adjust X axis</label>
+									<input type="range" min="1" max="200" value="20" oninput="xaxis=float(this.value)" class="slider">
+								</div>
+								<div class="column">
+									<label>Adjust Y axis</label>
+									<input type="range" min="1" max="200" value="20" oninput="yaxis=float(this.value)" class="slider">
+								</div>
+								<div class="column">
+									<label>Font Size</label>
+									<input type="range" min="0.05" max="5" value="1" step="0.1" oninput="fontsize=float(this.value)" class="slider">
+								</div>
+								<div class="column">
+									<label>width</label>
+									<input type="range" min="100" max="800" value="700" oninput="w=float(this.value)" class="slider">
+								</div>
+								<div class="column">
+									<label>Line Spacing</label>
+									<input type="range" min="50" max="100" value="60" oninput="linespacing=float(this.value)" class="slider">
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+				<div class="column">
+					<div id="contributing"></div>
+				</div>
+			</div>
 
 			<footer class="footer">
 				<section class="container">
