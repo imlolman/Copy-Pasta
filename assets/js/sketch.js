@@ -5,7 +5,7 @@ fontNum = 1
 pageNum = 1
 xaxis=20
 yaxis=20
-fontsize=1
+fontsize=0.4
 w=700
 linespacing=60
 fontText = [];
@@ -57,6 +57,12 @@ function changeFont(){
         }
     }
     for(var i=97;i<=122;i+=1){
+        try {
+            fontText['textImage'+String.fromCharCode(i)] = loadImage('fontText/'+str(i)+'.jpg')
+        } catch (error) {
+        }
+    }
+    for(var i=48;i<=57;i+=1){
         try {
             fontText['textImage'+String.fromCharCode(i)] = loadImage('fontText/'+str(i)+'.jpg')
         } catch (error) {
