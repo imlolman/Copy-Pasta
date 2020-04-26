@@ -15,13 +15,12 @@ function preload() {
 }
 
 function setup(){
-    canvas = createCanvas(750,1000, WEBGL)
+    canvas = createCanvas(750,1000)
     canvas.parent('contributing')
     rectMode(CORNER);
 }
 
 function draw(){
-    translate(-width/2,-height/2,0);
     image(img, 0, 0, width, height)
     textFont(myFont);
     textSize(fontsize)
@@ -29,7 +28,6 @@ function draw(){
     if(linespacing){
         textLeading(linespacing);
     }
-    texture(img)
     data = "\n"+myData
     text(data, xaxis, yaxis, w, 900);
 }
