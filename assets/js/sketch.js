@@ -1,8 +1,10 @@
 myData = `What is Reinforcement Learning?
 Reinforcement learning (RL) is an area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.`
-let img, myFont;
+let img, 
+myFont = [];
+myFonts = 4
 imgNum = 1
-fontNum = 1
+fontNum = 0
 pageNum = 1
 xaxis=20
 yaxis=20
@@ -10,7 +12,7 @@ fontsize=30
 w=700
 linespacing=false
 function preload() {
-    changeFont();
+    fontLoad();
     loadPage();
 }
 
@@ -22,7 +24,7 @@ function setup(){
 
 function draw(){
     image(img, 0, 0, width, height)
-    textFont(myFont);
+    textFont(myFont[fontNum]);
     textSize(fontsize)
     fill('#264180')
     if(linespacing){
@@ -32,8 +34,15 @@ function draw(){
     text(data, xaxis, yaxis, w, 900);
 }
 
+function fontLoad(){
+    for(var i = 0; i < myFonts; i++){
+        myFont.push(loadFont('fonts/font ('+str(i)+').ttf'));
+    }
+}
+
 function changeFont(){
-    myFont = loadFont('fonts/font (2).ttf');
+    fontNum += 1;
+    fontNum %= 4
 }
 
 function loadPage(){
