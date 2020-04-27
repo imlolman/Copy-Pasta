@@ -22,8 +22,8 @@ function setup(){
 }
 
 function draw(){
-    background(255)
-    // image(img, 0, 0, width, height)
+    tint(255)
+    image(img, 0, 0, width, height)
     textSize(fontsize)
     fill('#264180')
     if(linespacing){
@@ -31,6 +31,7 @@ function draw(){
     }
     pos = createVector(xaxis, yaxis)
     data = "\n"+myData
+    tint('#264180');
     // text(data, xaxis, yaxis, w, 900);
     for(var i=0;i<=myData.length;i++){
         if(pos.x >= xaxis+w || myData[i]=='\n'){
@@ -47,7 +48,7 @@ function draw(){
 function changeFont(){
     dataAvailable.forEach(i => {
         try {
-            fontText['textImage'+String.fromCharCode(i)] = loadImage('fontText/'+str(i)+'.jpg')
+            fontText['textImage'+String.fromCharCode(i)] = loadImage('fontText/'+str(i)+'_t.png')
         } catch (error) {
         }
     });
