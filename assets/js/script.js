@@ -23,7 +23,9 @@ window.onload = function () {
         var reader = new FileReader();
         reader.readAsDataURL(fontupload.files[0]);
         reader.onload = function (e) {
-            myFont = loadFont(e.target.result);
+            myFont.push(loadFont(e.target.result))
+            myFonts += 1
+            fontNum = myFonts - 1
         }
     };
 
