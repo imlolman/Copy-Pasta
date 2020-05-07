@@ -2,7 +2,7 @@ myData = `What is Reinforcement Learning?
 Reinforcement learning (RL) is an area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.`
 let img, 
 myFont = [];
-myFonts = 7
+myFonts = 10 //total number of files on font folder
 imgNum = 1
 fontNum = 0
 pageNum = 1
@@ -10,7 +10,7 @@ xaxis=20
 yaxis=20
 fontsize=30
 w=700
-linespacing=false
+linespacing=30
 function preload() {
     fontLoad();
     loadPage();
