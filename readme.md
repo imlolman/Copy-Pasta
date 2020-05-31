@@ -2,6 +2,6 @@
 
 Check it out on: https://imlolman.github.io/Copy-Pasta/
 
-YT Link: Will Update Soon*****
+YT Link: https://www.youtube.com/watch?v=z1zfLJSo3C0
 
 My Site: https://imlolman.github.io/
