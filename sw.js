@@ -2,7 +2,7 @@ class Pwa {
 
     constructor(self) {
         this.scope = self;
-        this.CACHE_VERSION = 2.7;
+        this.CACHE_VERSION = 2.9;
         // dir /s /b /a:-D
         this.BASE_CACHE_FILES = ["index.html", "manifest.json", "readme.md", "sw.js", "assets/css/custom.css", "assets/css/dark.css", "assets/css/main.css", "assets/css/milligram.min.css", "assets/css/normalize.css", "assets/css/style.css", "assets/css/fa/css/all.min.css", "assets/css/fa/webfonts/fa-brands-400.eot", "assets/css/fa/webfonts/fa-brands-400.svg", "assets/css/fa/webfonts/fa-brands-400.ttf", "assets/css/fa/webfonts/fa-brands-400.woff", "assets/css/fa/webfonts/fa-brands-400.woff2", "assets/css/fa/webfonts/fa-regular-400.eot", "assets/css/fa/webfonts/fa-regular-400.svg", "assets/css/fa/webfonts/fa-regular-400.ttf", "assets/css/fa/webfonts/fa-regular-400.woff", "assets/css/fa/webfonts/fa-regular-400.woff2", "assets/css/fa/webfonts/fa-solid-900.eot", "assets/css/fa/webfonts/fa-solid-900.svg", "assets/css/fa/webfonts/fa-solid-900.ttf", "assets/css/fa/webfonts/fa-solid-900.woff", "assets/css/fa/webfonts/fa-solid-900.woff2", "assets/images/apple-touch-icon-144x144.png", "assets/images/apple-touch-icon-152x152.png", "assets/images/favicon-128.png", "assets/images/favicon-196x196.png", "assets/images/logo.svg", "assets/images/splash.png", "assets/js/extend.js", "assets/js/script.js", "assets/js/p5.min.js", "assets/js/sketch.js", "fonts/font (0).ttf", "fonts/font (1).ttf", "fonts/font (2).ttf", "fonts/font (3).ttf", "fonts/font (4).ttf", "fonts/font (5).ttf", "fonts/font (6).ttf", "fonts/font (7).ttf", "fonts/font (8).ttf", "fonts/font (9).ttf", "pages/page (2).jpg"]
         
