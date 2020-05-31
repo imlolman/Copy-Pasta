@@ -1,27 +1,90 @@
 .navigation {
-  background: rgb(36, 36, 36);
-  border-bottom: 0.1rem solid rgb(71, 71, 71);
+    background: rgb(36, 36, 36);
+    border-bottom: 0.1rem solid rgb(71, 71, 71);
+  }
+  
+  body {
+    color: rgb(185, 192, 198);
+    background-color: #1f1f1f;
+    background-image: none !important;
+  }
+  .navigation .navigation-title,
+  .navigation .title {
+    color: rgb(185, 192, 198);
+  }
+  
+  a {
+    color: var(--color-primary-darker);
+  }
+  
+  a:focus,
+  a:hover {
+    color: rgb(185, 192, 198);
+  }
+  
+  .navigation .img {
+    color: var(--color-primary-darker);
+  }
+
+  fieldset,input,select,textarea{
+    border-color: rgb(71, 71, 71);
+  }
+
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
 }
 
-body {
-  color: rgb(185, 192, 198);
-  background-color: #1f1f1f;
-  background-image: none !important;
-}
-.navigation .navigation-title,
-.navigation .title {
-  color: rgb(185, 192, 198);
+::-webkit-scrollbar-button {
+    background-color: #3e4346 !important;
 }
 
-a {
-  color: rgb(199, 157, 226);
+::-webkit-scrollbar-track {
+    background-color: #646464 !important;
 }
 
-a:focus,
-a:hover {
-  color: rgb(185, 192, 198);
+::-webkit-scrollbar-track-piece {
+    background-color: #3e4346 !important;
 }
 
-.navigation .img {
-  fill: rgb(199, 157, 226);
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #242424 !important;
+    border: 2px solid #3e4346 !important;
+}
+
+::-webkit-scrollbar-corner {}
+
+::-webkit-resizer {}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background:
+        linear-gradient(130deg, #696969 40%, rgba(255, 0, 0, 0) 41%),
+        linear-gradient(230deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(0deg, #696969 40%, rgba(0, 0, 0, 0) 31%);
+    background-color: #b6b6b6;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(310deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(50deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #696969 40%, rgba(0, 0, 0, 0) 31%);
+    background-color: #b6b6b6;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #696969 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #b6b6b6;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #696969 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #696969 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #b6b6b6;
 }

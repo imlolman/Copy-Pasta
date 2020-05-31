@@ -1,108 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="imLolman">
-		<meta name="description" content="Convet Digital to Handwritten Scanned Page. Waana Save time on writing assginment on Paper use Our Super Fast Tool.">
-		<title>Copy Pasta | Convet Digital to Handwritten Scanned Page.</title>
-		<link rel="icon" href="assets/images/logo.png">
-		<meta property="og:image" content="https://repository-images.githubusercontent.com/259044567/7737b480-87f8-11ea-9dd6-3c649ad63d14" />
-		<script src="https://imlolman.github.io/js/controller.js"></script>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
-		<link rel="stylesheet" href="https://milligram.io/styles/main.css">
-		<link rel="stylesheet" href="assets/css/custom.css">
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142979168-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
+<head>
+    <meta charset="UTF-8" /><!--Just charset-->
+    <meta name="language" content="English"><!--for language-->
+    <meta name="viewport" id="myViewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><!--for viewport-->
+    <meta name="description" content="Convet Digital to Handwritten Scanned Page."><!--for description of website | upto 160 characters only-->
+    <meta name="keywords" content="Assginment Writer, Convet Digital to Handwritten Scanned Page."><!--for keywords-->
+    <meta name="theme-color" content="#1dd1a1" /><!--for android chrome topbar theme-->
+    <link rel="shortcut icon" href="assets/images/favicon-128.png"><!--fevicon -->
+    <meta property="og:type" content="website" /><!--for telling about website-->
+    <meta property="og:title" content="Copy Pasta" /><!--for fb title-->
+    <meta property="og:description" content="Convet Digital to Handwritten Scanned Page." /><!--for fb description-->
+    <meta property="og:image" content="https://imlolman.github.io/projects/images/Copy-Pasta.png" /><!--for fb image-->
+    <meta property="og:url" content="https://imlolman.github.io/Copy-Pasta/" /><!--for fb permanent URL-->
+    <meta property="og:site_name" content="Copy Pasta" /><!--for overall company name-->
+    <meta property="fb:app_id" content="620425188558211" />
+    <link rel="canonical" href="https://imlolman.github.io/Copy-Pasta/" /><!--for fixed current page url-->
+    <meta name="twitter:title" content="Copy Pasta"><!--for twitter title-->
+    <meta name="twitter:description" content="Convet Digital to Handwritten Scanned Page."><!--for twitter description-->
+    <meta name="twitter:image" content="https://imlolman.github.io/projects/images/Copy-Pasta.png"><!--for twitter image-->
+    <meta name="twitter:creator" content="@satyam755755"><!--twitter username-->
+    <meta name="robots" content="index, follow"><!--for google crawling-->
+    <title>Copy Pasta</title>
+    <style>
+        :root{
+            --color: #f53b57;/*the initial lightness*/
+            --color-primary: #f53b57;
+            --color-primary-darker: #f53b57;
+            --color-primary-darkest: #f53b57;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <script src="https://imlolman.github.io/js/controller.js"></script>
+    <link rel="stylesheet" href="assets/css/milligram.min.css">
+    <link href="assets/css/fa/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142979168-1"></script> <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+</script>
 
-		  function gtag() {
-		    dataLayer.push(arguments);
-		  }
-		  gtag('js', new Date());
+</head>
+<body>
+    <main class="wrapper">
+        <nav class="navigation nav-top">
+            <section class="container">
+                <a class="navigation-title" href="/">
+                    <img src="assets/images/logo.svg" class="logo">
+                    &nbsp;
+                    <h1 class="title">Copy Pasta</h1>
+                </a>
+                <ul class="navigation-list float-right">
+                    <li class="navigation-item">
+                        <label class="switch">
+                            <input type="checkbox" id="darkmode" onclick='darkLightToggle()'>
+                            <span class="slider"></span>
+                          </label>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <section class="container">
+            <h3>Write Text 😅</h3><br>
+            <form onsubmit="return false">
+                <fieldset>
+                    <textarea placeholder="Enter Text You want to be written a paper...." id="dataField" onkeyup="myData = this.value"></textarea>
+                </fieldset>
+                <input class="button-primary button-large download-image hidden" type="file" id="pageUploader" onclick="">
+                <input class="button-primary button-large download-image hidden" type="file" id="fontUploader" onclick="">
+                <div class="row">
+                    <button class="column button-primary button-large inline-btn" id="btnPageUpload">Upload Page</button>
+                    <button class="column button-primary button-large inline-btn" onclick="loadPage()">Default Page</button>
+                    <button class="column button-primary button-large inline-btn" onclick="changeFont()">Switch Font</button>
+                    <button class="column button-primary button-large inline-btn" id="btnFontUpload" onclick="uploadFont()">Upload Your Font</button>
+                    <button class="column button-primary button-large download-image inline-btn" onclick="save(str(pageNum++))">Download Page</button>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label>Adjust X axis</label>
+                        <input type="range" min="1" max="200" value="20" oninput="xaxis=float(this.value)" class="slider">
+                    </div>
+                    <div class="column">
+                        <label>Adjust Y axis</label>
+                        <input type="range" min="1" max="200" value="20" oninput="yaxis=float(this.value)" class="slider">
+                    </div>
+                    <div class="column">
+                        <label>Font Size</label>
+                        <input type="range" min="1" max="100" value="30" oninput="fontsize=float(this.value)" class="slider">
+                    </div>
+                    <div class="column">
+                        <label>width</label>
+                        <input type="range" min="100" max="800" value="700" oninput="w=float(this.value)" class="slider">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label>Line Spacing</label>
+                        <input type="range" min="10" max="50" value="30" oninput="linespacing=float(this.value)" class="slider" step="0.01">
+                    </div>
+                </div>
+            </form>
+            <div id="contributing"></div>
+        </section>
+        <footer class="footer">
+            <section class="container">
+                <p>Designed with ♥ by <a target="_blank" href="https://imlolman.github.io/" title="imlolman">imLolman</a>. Licensed under the <a target="_blank" href="https://github.com/milligram/milligram#license" title="MIT License">MIT License</a>.</p>
+            </section>
+        </footer>
+    </main>
+</body>
+    <script src="assets/js/p5.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/extend.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <script>
+     if ('serviceWorker' in navigator) {
+     navigator.serviceWorker
+         .register('./sw.js', { scope: './' })
+         .then(() => {
+             console.info('Service Worker Registered');
+         }, err => console.error("Service Worker registration failed: ", err));
 
-		  gtag('config', '{{ site.google_analytics }}');
-		</script>
-        <!-- <link rel="stylesheet" href="/assets/css/dark.css"> -->
-	</head>
-	<body>
-		<main class="wrapper">
-			<nav class="navigation">
-				<section class="container">
-					<a class="navigation-title" href="/">
-						<svg class="img" version="1.1" viewBox="0 0 463 669">
-							<g transform="translate(0.000000,120)">
-								<path d="M623.2 192c-51.8 3.5-125.7 54.7-163.1 71.5-29.1 13.1-54.2 24.4-76.1 24.4-22.6 0-26-16.2-21.3-51.9 1.1-8 11.7-79.2-42.7-76.1-25.1 1.5-64.3 24.8-169.5 126L192 182.2c30.4-75.9-53.2-151.5-129.7-102.8L7.4 116.3C0 121-2.2 130.9 2.5 138.4l17.2 27c4.7 7.5 14.6 9.7 22.1 4.9l58-38.9c18.4-11.7 40.7 7.2 32.7 27.1L34.3 404.1C27.5 421 37 448 64 448c8.3 0 16.5-3.2 22.6-9.4 42.2-42.2 154.7-150.7 211.2-195.8-2.2 28.5-2.1 58.9 20.6 83.8 15.3 16.8 37.3 25.3 65.5 25.3 35.6 0 68-14.6 102.3-30 33-14.8 99-62.6 138.4-65.8 8.5-.7 15.2-7.3 15.2-15.8v-32.1c.2-9.1-7.5-16.8-16.6-16.2z" class=""></path>
-							</g>
-						</svg>
-						&nbsp;
-						<h1 class="title">Copy Pasta</h1>
-					</a>
-					<ul class="navigation-list float-right">
-						<li class="navigation-item">
-							<label class="switch">
-								<input type="checkbox" id="darkmode" onclick='darkLightToggle()'>
-								<span class="slider"></span>
-							  </label>
-						</li>
-					</ul>
-				</section>
-			</nav>
-			<section class="container" id="examples">
-				<h3 class="title">Write Text</h3>
-				<form onsubmit="return false">
-					<fieldset>
-						<textarea placeholder="Enter Text You want to be written a paper...." id="dataField" onkeyup="myData = this.value"></textarea>
-					</fieldset>
-					<input class="button-primary button-large download-image hidden" type="file" id="pageUploader" onclick="">
-					<input class="button-primary button-large download-image hidden" type="file" id="fontUploader" onclick="">
-					<div class="row">
-						<button class="column button-primary button-large inline-btn" id="btnPageUpload">Upload Page</button>
-						<button class="column button-primary button-large inline-btn" onclick="loadPage()">Default Page</button>
-						<button class="column button-primary button-large inline-btn" onclick="changeFont()">Switch Font</button>
-						<button class="column button-primary button-large inline-btn" id="btnFontUpload" onclick="uploadFont()">Upload Your Font</button>
-						<button class="column button-primary button-large download-image inline-btn" onclick="save(str(pageNum++))">Download Page</button>
-					</div>
-					<div class="row">
-						<div class="column">
-							<label>Adjust X axis</label>
-							<input type="range" min="1" max="200" value="20" oninput="xaxis=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>Adjust Y axis</label>
-							<input type="range" min="1" max="200" value="20" oninput="yaxis=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>Font Size</label>
-							<input type="range" min="1" max="100" value="30" oninput="fontsize=float(this.value)" class="slider">
-						</div>
-						<div class="column">
-							<label>width</label>
-							<input type="range" min="100" max="800" value="700" oninput="w=float(this.value)" class="slider">
-						</div>
-					</div>
-					<div class="row">
-						<div class="column">
-							<label>Line Spacing</label>
-							<input type="range" min="10" max="50" value="30" oninput="linespacing=float(this.value)" class="slider" step="0.01">
-						</div>
-					</div>
-				</form>
-				<div id="contributing"></div>
-			</section>
-
-			<footer class="footer">
-				<section class="container">
-					<p>Designed with ♥ by <a target="_blank" href="https://imlolman.github.io/" title="imlolman">imLolman</a>. Licensed under the <a target="_blank" href="https://github.com/milligram/milligram#license" title="MIT License">MIT License</a>.</p>
-				</section>
-			</footer>
-		</main>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/sketch.js"></script>
-
-	</body>
+     navigator.serviceWorker
+         .ready
+         .then(() => {
+             console.info('Service Worker Ready');
+         });
+ }
+ </script>
 </html>

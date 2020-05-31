@@ -1,4 +1,7 @@
-## Hi, This is Copy Pasta 👋🏼
+# Copy Pasta | Convet Digital to Handwritten Scanned Page.
 
-### Convet Digital to Handwritten Scanned Page. View it Online Here
-### https://imlolman.github.io/Copy-Pasta/
+Check it out on: https://imlolman.github.io/Copy-Pasta/
+
+YT Link: Will Update Soon*****
+
+My Site: https://imlolman.github.io/
