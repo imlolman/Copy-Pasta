@@ -1,7 +1,7 @@
 window.onload = function () {
     loadDarkModeFromLocalStorage();
     darkLightToggle()
-    // runOnLoad()
+    runOnLoad()
 };
 
 function loadDarkModeFromLocalStorage(){
